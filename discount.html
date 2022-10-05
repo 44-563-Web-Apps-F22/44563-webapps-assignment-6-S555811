@@ -39,5 +39,39 @@ function discount (){
 }
 </script>
 
+<form>
+    <input type="radio" onclick="chooseOp()" id="times" name="topping1"   
+      value="times">
+    <label for="*">*</label></br>
+    <input type="radio" onclick="chooseOp()" id="divide" name="topping2"   
+       value="divide">
+    <label for="/">/</label></br>
+    <input type="radio" onclick="chooseOp()" id="expo" name="topping3"   
+       value="exponent">
+    <label for="**">**</label></br>    
+  </form>
+
+  <p id="resul">Results</p>
+  <script>
+      function chooseOp(){
+      amount  = document.getElementById("BaseAmt").value
+      discount = document.getElementById("discValue").value
+      out = document.getElementById("resul")
+      if(document.getElementById("times").checked){
+          let x=+amount*discount;
+          out.innerHTML=x
+      }
+      else if(document.getElementById("expo").checked){
+          out.innerHTML=amount**discount
+      }
+      
+      else if(document.getElementById("divide").checked){
+          ou.innerHTML=amount/discount
+      }
+    }   
+  </script>
+
+
+
 </body>
 </html> 
