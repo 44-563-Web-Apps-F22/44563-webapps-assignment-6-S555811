@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>discount program</title>
+    </head>
+ 
+<body>
+
+<h2>Vengalarao Yeluri computes discounts</h2>
+<div class="container">
+<form>
+    <label for="BaseAmt">Enter base amount</label>
+    <input type ="number" id="BaseAmt" name="BaseAmt" value=20> <br>
+    <br>
+    <label for="discValue">Enter the discount percentage </label>
+    <input type ="number" id="discValue" name="discValue" value=10> <br>
+    <br>
+    <input type="button" onclick="discount()" value="Apply discount">
+    <br>
+</form>
+
+
+<p id="result"> the changes will be seen here</p>
+</div>
+<script> 
+
+function discount (){
+ 
+    let BaseAmt = document.getElementById("BaseAmt").value;
+    let value = document.getElementById("discValue").value;
+    let result="";
+    for(let j=1;j<6;j++){
+        let discount=(BaseAmt*j)-((BaseAmt*j)*value/100);
+        result=result+" "+discount;
+    }
+   
+    document.getElementById("result").innerHTML = "Discounted amounts for base "+  BaseAmt +"  are " +result;
+    
+}
+</script>
+
+</body>
+</html> 
